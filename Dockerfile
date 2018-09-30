@@ -4,5 +4,5 @@ ENV GITREPO=https://github.com/Kruptein/PlanarAlly.git/
 RUN apk add --update --no-cache git python3-dev libffi-dev openssl-dev && pip3 install --upgrade pip &&\
     git clone $GITREPO /app
 WORKDIR /app/PlanarAlly
-    pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt
 CMD "python3 planarserver.py"
